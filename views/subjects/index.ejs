@@ -1,0 +1,10 @@
+<h2>Search Subjects</h2>
+<form action="/subjects" method="GET">
+    <label>Name</label>
+    <input type="text" name="name" value="<%= searchOptions.name%>">
+    <button type="submit">Search</button>
+</form>
+<br>
+<% subjects.forEach(subject=>{%>
+    <div><%= subject.name %></div>
+<% }) %>
