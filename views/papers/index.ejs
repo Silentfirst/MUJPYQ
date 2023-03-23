@@ -1,0 +1,14 @@
+<h2>Search Paper</h2>
+<form action="/papers" method="GET">
+    <div> 
+    <label>Subject Name</label>
+    <input type="text" name="title" value="<%= searchOptions.title%>">
+    </div>
+    <button type="submit">Search</button>
+</form>
+<br>
+<div>
+<% papers.forEach(paper=>{ %>
+   <img height="150" width="100" src="%= paper.coverImagePath%">
+<% }) %>
+</div>

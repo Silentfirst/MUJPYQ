@@ -1,0 +1,28 @@
+<div><label>Subject name</label>
+<input type="text" name="title" value="<%= paper.title%>">
+</div>
+<div>
+<label>Subject</label>
+<select name="subject">
+    <% subjects.forEach((subject) => { %>
+      <% if (subject.id === paper.subject) { %>
+        <option selected value="<%= subject.id %>"><%= subject.name %></option>
+      <% } else { %>
+        <option value="<%= subject.id %>"><%= subject.name %></option>
+      <% } %>
+    <% }) %>
+  </select>
+  </div> 
+  <div>
+<label>Paper Date</label>
+<input type="Number" name="paperDate" min="2010" max="2024" 
+    value="<%= paper.paperDate%>">
+</div>
+<div>
+    <label>Image</label>
+    <input type="file" name="cover">
+    </div>
+<div>
+    <label>Syllabus</label>
+    <textarea name="description"><%= paper.description %></textarea>
+    </div>

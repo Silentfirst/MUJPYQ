@@ -9,6 +9,7 @@ const bodyParser = require('body-parser')
 
 const indexRouter= require('./routes/index')
 const subjectRouter= require('./routes/subjects')
+const paperRouter= require('./routes/papers')
 
 
 app.set('view engine','ejs')
@@ -33,5 +34,6 @@ console.log('successful')
 
 app.use('/', indexRouter)
 app.use('/subjects', subjectRouter)
+app.use('/papers',paperRouter)
+
 app.listen(process.env.PORT || 3000) //server gonna tell the port it is listening to, by defgault it is 3000
-// const db_link='mongodb+srv://ashishrajshukla231:A3UYpl1HcuRYNXAS@cluster0.4hdgzcm.mongodb.net/?retryWrites=true&w=majority';
